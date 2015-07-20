@@ -1,0 +1,28 @@
+{
+  "name": "scientist-kit",
+  "version": "1.0.0",
+  "description": "Scientist kit and examples for NodeBots Day 2015",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodebotsau/scientist-kit.git"
+  },
+  "keywords": [
+    "nodebots",
+    "javascript",
+    "robotics",
+    "nodebotsday"
+  ],
+  "author": "Andrew Fisher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodebotsau/scientist-kit/issues"
+  },
+  "homepage": "https://github.com/nodebotsau/scientist-kit#readme"
+}
