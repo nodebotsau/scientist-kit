@@ -202,3 +202,20 @@ node examples/sound.js
 When it runs if you make some noise like clapping your hands you'll see the values
 spike upwards.
 
+
+### Other components and what they do
+
+The other components don't have specific examples but here are some notes around them:
+
+* An RGB LED is simply a red, green and blue LED in one package. Wire it up to 
+three digital pins and change the colour. The one in your kit is a `Common Cathode`
+RGB LED. [There's a code and wiring example here](http://johnny-five.io/examples/led-rgb/)
+* A potentiometer is a variable resistor. In your kit there are two and they
+look like dials you can turn. The two outer pins connect to 5V and GND (doesn't
+matter which way) and the centre pin connects to an analog pin on the arduino
+which you can then read with the [Sensor class](http://johnny-five.io/examples/potentiometer/)
+* Push buttons are what you'd expect - buttons you can push and then detect
+them. There's a [Button class](http://johnny-five.io/examples/button/) that has
+you covered. Use the 10K resistor to pull down the voltage.
+
+
