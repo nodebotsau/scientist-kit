@@ -202,6 +202,28 @@ node examples/sound.js
 When it runs if you make some noise like clapping your hands you'll see the values
 spike upwards.
 
+### Play that (squeaky) music....
+
+A long term crowd pleaser at every NodeBots event is the Piezo buzzer. This little
+bundle of squeaky goodness will play whatever high pitched squawky notes you can
+throw at it.
+
+[Here's the wiring diagram from Node-ARDX](http://node-ardx.org/exercises/6)
+
+Things to note (if you pardon the pun):
+
+* Piezo's aren't very loud so you need to be quiet to hear them properly.
+* There is a + marked on one side, this goes to the pin, the other side goes to ground
+* Piezo's only work on PWM pins - they are the ones marked with `~` on them
+
+The code is available at [examples/piezo.js](examples/piezo.js)
+
+Run with:
+
+```
+node examples/piezo.js
+```
+
 
 ### Other components and what they do
 
@@ -217,5 +239,8 @@ which you can then read with the [Sensor class](http://johnny-five.io/examples/p
 * Push buttons are what you'd expect - buttons you can push and then detect
 them. There's a [Button class](http://johnny-five.io/examples/button/) that has
 you covered. Use the 10K resistor to pull down the voltage.
+* The little computer chip is called a [Shift Register](http://johnny-five.io/examples/shift-register/)
+and they are very helpful to drive a lot of LEDs off only a couple of pins on the
+arduino. Great if you want to make a countdown or a [binary clock display](https://en.wikipedia.org/wiki/Binary_clock)
 
 
