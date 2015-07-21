@@ -81,7 +81,9 @@ to the appropriate location.
 
 The hello world of hardware. [Look at the wiring instructions here](http://johnny-five.io/examples/)
 for one of the most basic circuits you can make. The code is available at
-[examples/led.js](examples/led.js). Run with:
+[examples/led.js](examples/led.js). 
+
+Run with:
 
 ```
 node examples/led.js
@@ -89,5 +91,25 @@ node examples/led.js
 
 And you should get a blinking LED.
 
+### Write text on an LCD
+
+Want to write some text on a screen? Maybe you could use this to write out the
+contents of a tweet, or how much you love NodeBots Day.
+
+[The wiring instructions are here in the Johnny Five docs](http://johnny-five.io/examples/lcd/)
+
+Note:
+
+* Your potentiometer is bigger than the one in the diagram so leave a bit more
+space for it.
+* Pay attention to what is power and ground on the diagram versus how you wire it up
+
+The code is available at [examples/lcd.js](examples/lcd.js)
+
+Run with:
+
+```
+node examples/lcd.js
+```
 
 
