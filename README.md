@@ -171,10 +171,34 @@ The code is available at [examples/neopixel.js](examples/neopixel.js)
 Run with:
 
 ```
-node example/neopixel.js
+node examples/neopixel.js
 ```
 
 When it runs you should see some pixels chasing each other up the strip and
 changing colour as they go.
 
+### Make some noise
+
+The sound sensor is a very simple microphone that outputs an analog signal. In
+Johnny Five this can be represented very simply as a `Sensor` object. 
+
+[Wiring instructions can be found in the Johnny Five docs](http://johnny-five.io/examples/microphone/)
+
+Things to note:
+
+* Use the F-M wires and connect to the back of the board. S is Signal and goes
+to A0, G is Ground and goes to GND, V is voltage and goes to 5V.
+* You can't really record something with this type of mic as it doesn't have
+much range.
+
+The code is available at [examples/sound.js](examples/sound.js)
+
+Run with
+
+```
+node examples/sound.js
+```
+
+When it runs if you make some noise like clapping your hands you'll see the values
+spike upwards.
 
