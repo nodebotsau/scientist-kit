@@ -112,4 +112,25 @@ Run with:
 node examples/lcd.js
 ```
 
+You should see some messages appear on the screen.
+
+### Make something move with a servo
+
+Servos are great to make things move. In the kit is what's called a Standard Servo
+and it will move 180 degrees in an arc. So you could use it to make something
+wave, or pull a trigger or push something too.
+
+[The wiring instructions are from the Johnny Five docs](http://johnny-five.io/examples/servo-prompt/)
+
+The code is available at [](examples/servo.js)
+
+Run with:
+
+```
+node examples/servo.js
+```
+
+When it runs you should be able to set values between 0 and 180 and hit enter
+and your servo will move to that position.
+
 
