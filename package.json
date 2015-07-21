@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/nodebotsau/scientist-kit/issues"
   },
-  "homepage": "https://github.com/nodebotsau/scientist-kit#readme"
+  "homepage": "https://github.com/nodebotsau/scientist-kit#readme",
+  "dependencies": {
+    "johnny-five": "^0.8.85",
+    "node-pixel": "^0.4.0"
+  }
 }
