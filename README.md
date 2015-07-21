@@ -83,6 +83,13 @@ The hello world of hardware. [Look at the wiring instructions here](http://johnn
 for one of the most basic circuits you can make. The code is available at
 [examples/led.js](examples/led.js). 
 
+Things to note:
+
+* Pin 13 is special because it has a resistor attached to it which means you 
+won't blow up an LED by connecting it directly. If you want to use an LED on
+any other pin, connect it with a resistor between the LED and the digital pin
+on the arduino.
+
 Run with:
 
 ```
@@ -122,7 +129,14 @@ wave, or pull a trigger or push something too.
 
 [The wiring instructions are from the Johnny Five docs](http://johnny-five.io/examples/servo-prompt/)
 
-The code is available at [](examples/servo.js)
+Things to note:
+
+* Servos aren't really accurate so don't expect to see perfect changes between 
+41 and 42 degrees. they are designed for high torque and big movements.
+* Lots of servos will overload your arduino so if you are using more than 2 at 
+a time then consider a dedicated battery pack.
+
+The code is available at [examples/servo.js](examples/servo.js)
 
 Run with:
 
@@ -132,5 +146,35 @@ node examples/servo.js
 
 When it runs you should be able to set values between 0 and 180 and hit enter
 and your servo will move to that position.
+
+### Make a light display with neopixels
+
+NeoPixels or WS2812 LEDs are individually controllable LEDs that come in a strip.
+The wonderful thing about these LEDs is that they are both RGB so you can set
+the colour but they are individually addressable. On the strip you have in your
+kit you have 8 so you can set each one to be a separate colour.
+
+[Detailed instructions are available from the node-pixel docs](https://github.com/ajfisher/node-pixel/blob/master/docs/installation.md#hardware-installation)
+
+A simple wiring guide is below:
+
+![](https://raw.github.com/ajfisher/node-pixel/master/docs/custom_firmata_bb.png)
+
+Things to note:
+
+* The more updates you make to the strip the more data has to be processed best
+to do all your processing JS side and then send the changes to the arduino when
+you're ready to display.
+
+The code is available at [examples/neopixel.js](examples/neopixel.js)
+
+Run with:
+
+```
+node example/neopixel.js
+```
+
+When it runs you should see some pixels chasing each other up the strip and
+changing colour as they go.
 
 
