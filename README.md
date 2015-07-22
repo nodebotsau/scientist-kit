@@ -98,6 +98,12 @@ node examples/led.js
 
 And you should get a blinking LED.
 
+Going further:
+
+* Have diffrerent coloured LEDs light up for different interactions
+* Use [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) to make your
+LED fade different colours. [Johnny Five has a good example](http://johnny-five.io/examples/led-fade/)
+
 ### Write text on an LCD
 
 Want to write some text on a screen? Maybe you could use this to write out the
@@ -120,6 +126,13 @@ node examples/lcd.js
 ```
 
 You should see some messages appear on the screen.
+
+Going further:
+
+* Update the screen periodically with a counter - maybe a countdown clock
+* Make a "scrolling game" or just make your text scroll across the screen.
+* Use the display to ask for input which you can then use buttons or potentiometers
+to provide the details back.
 
 ### Make something move with a servo
 
@@ -146,6 +159,13 @@ node examples/servo.js
 
 When it runs you should be able to set values between 0 and 180 and hit enter
 and your servo will move to that position.
+
+Going further:
+
+* Use the [Johnny Five animation library](http://johnny-five.io/examples/servo-animation/) in
+order to provide keyframes and animate the motion.
+* Get your servo to repond to some other stimulus such as receiving a message then
+doing an action.
 
 ### Make a light display with neopixels
 
@@ -177,6 +197,11 @@ node examples/neopixel.js
 When it runs you should see some pixels chasing each other up the strip and
 changing colour as they go.
 
+Going further:
+
+* Use the LEDs to react to something happening on your server such as load, memory etc
+* Animate different patterns of LEDs for different meanings.
+
 ### Make some noise
 
 The sound sensor is a very simple microphone that outputs an analog signal. In
@@ -202,6 +227,13 @@ node examples/sound.js
 When it runs if you make some noise like clapping your hands you'll see the values
 spike upwards.
 
+Going further:
+
+* Use the sound sensor for input and then use an LED or NeoPixel to indicate
+how noisy things are.
+* Use the sound sensor to raise or lower the volume of some music depending
+on the ambient noise levels.
+
 ### Play that (squeaky) music....
 
 A long term crowd pleaser at every NodeBots event is the Piezo buzzer. This little
@@ -225,6 +257,12 @@ node examples/piezo.js
 ```
 
 When it runs you should hear a really squeaky and possibly irritating "tune".
+
+Going further:
+
+* Make a jukebox that plays different tunes depending on someone's selection
+* Play a tune depending on the outcome of an API
+* Play "ta da!" when your grunt tasks have finished running.
 
 ### Is it cold in here or is it just me?
 
@@ -258,6 +296,11 @@ node examples/temperature.js
 ```
 
 When the code runs you should see the temperature print out in °C, °F & °K.
+
+Going further:
+
+* Visualise temperature data by writing to a web app. 
+* Hook up an RGB LED or NeoPixel strip and visualise the temperature with colour
 
 ### Other components and what they do
 
