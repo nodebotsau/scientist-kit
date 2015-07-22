@@ -224,6 +224,40 @@ Run with:
 node examples/piezo.js
 ```
 
+When it runs you should hear a really squeaky and possibly irritating "tune".
+
+### Is it cold in here or is it just me?
+
+Temperature sensors are great place to start to start measuring environmental
+variables as they are pretty accurate for such a small and cheap package. They
+are pretty easy to set up too. Have a look at the wiring diagram below.
+
+![Wiring diagram](images/temperature.png)
+
+Things to note:
+
+* Check the direction of the temperature sensor to make sure you have the pins
+the right way around. Pins are determined by looking at the "face" of the sensor,
+ie the bit with the writing on it and they go from left to right.
+* The sensor requires a 2KΩ but you can use 2x1KΩ resistors in series as they
+"add up" to 2KΩ when used together like this.
+* The code we have here uses a custom controller. In Johnny-Five all components
+use controllers so we have generalised classes such as `Temperature Sensor` and 
+we can then implement the details and drivers of these for each chip or different
+sensor. The LM335 we are using measures directly in °K so needs the `toCelsius`
+method provided to do that conversion.
+* This circuit is what is known as a [Voltage Divider](https://en.wikipedia.org/wiki/Voltage_divider)
+which are really useful for all kinds of sensor measurement circuits.
+
+The code is available at [examples/temperature.js](examples/temperature.js)
+
+Run with:
+
+```
+node examples/temperature.js
+```
+
+When the code runs you should see the temperature print out in °C, °F & °K.
 
 ### Other components and what they do
 
@@ -242,5 +276,8 @@ you covered. Use the 10K resistor to pull down the voltage.
 * The little computer chip is called a [Shift Register](http://johnny-five.io/examples/shift-register/)
 and they are very helpful to drive a lot of LEDs off only a couple of pins on the
 arduino. Great if you want to make a countdown or a [binary clock display](https://en.wikipedia.org/wiki/Binary_clock)
+* A light sensor is great for looking at ambient light levels in the environment.
+It is just another example of the `Sensor Class` and a [great example is in
+Node-ARDX](http://node-ardx.org/exercises/9)
 
 
