@@ -1,6 +1,6 @@
 # NodeBots Day 2015 Scientist Kit
 
-This year you have a special nodebots kit which has been custom dessigned specifically
+You have a special nodebots kit which has been custom dessigned specifically
 for NodeBots day in order for you to get the most out of the day and build
 interesting things.
 
@@ -27,8 +27,7 @@ As you can see - lots of things to play with, learn about and take further.
 
 ## Installation and setup
 
-To get installed it's assumed you have the [Arduino IDE](http://arduino.cc), 
-and [NodeJS](http://nodejs.org) installed. 
+To get installed it's assumed you have [NodeJS](http://nodejs.org) installed.
 
 Clone this repository as:
 
@@ -43,20 +42,6 @@ arduino. In the `drivers/` folder you can find one for OSX and one for Windows.
 Just install the relevant one and you may need to restart your machine. Once done
 plug in your arduino and it should be fine (you'll get an error message if not).
 
-### Install the firmware on the arduino
-
-The next thing you need is a special firmata so you can use all of these
-components on your board because the Arduino is way too underpowered to run
-javascript. Open up arduino and browse to the repo folder then
-go to `firmware/sk_firmata/sk_firmata.ino`
-
-Select from the tools->Board menu "Arduino Uno" then again from the tools menu
-but this time port select the port that appears when you plug the arduino in (this
-may take a couple of guesses).
-
-Once you've got the right port, select upload and the board should flash and you're
-now done.
-
 ### Install node dependencies.
 
 From the repo folder simply:
@@ -69,23 +54,39 @@ And all your dependencies will be installed.
 
 Assuming you've had no issues, move onto the examples.
 
+### Install the firmware to the arduino
+
+To install the firmata firmware you'll need to talk to the arduino, you can
+install it using [interchange](https://www.npmjs.com/package/nodebots-interchange).
+Interchange is like a package manager or firmware written in JS.
+
+To use `interchange` make sure `./node_modules/.bin/` is on your `PATH` and then
+from the repo folder just run:
+
+```
+interchange install StandardFirmata -a uno
+```
+
+After a minute you should get notification about the firmware being flashed
+and you're ready to get programming.
+
 ## Examples
 
 These examples are very simple and have little explanation. They have been
 compiled from the `johnny-five` docs and from `node-ardx` package. We recommend
 you visit [Johnny Five](http://johnny-five.org) and [Node-ARDX](http://node-ardx.org)
-for really detailed versions of these - and the specific examples are linked 
+for really detailed versions of these - and the specific examples are linked
 to the appropriate location.
 
 ### Blink an LED
 
 The hello world of hardware. [Look at the wiring instructions here](http://johnny-five.io/examples/)
 for one of the most basic circuits you can make. The code is available at
-[examples/led.js](examples/led.js). 
+[examples/led.js](examples/led.js).
 
 Things to note:
 
-* Pin 13 is special because it has a resistor attached to it which means you 
+* Pin 13 is special because it has a resistor attached to it which means you
 won't blow up an LED by connecting it directly. If you want to use an LED on
 any other pin, connect it with a resistor between the LED and the digital pin
 on the arduino.
@@ -144,9 +145,9 @@ wave, or pull a trigger or push something too.
 
 Things to note:
 
-* Servos aren't really accurate so don't expect to see perfect changes between 
+* Servos aren't really accurate so don't expect to see perfect changes between
 41 and 42 degrees. they are designed for high torque and big movements.
-* Lots of servos will overload your arduino so if you are using more than 2 at 
+* Lots of servos will overload your arduino so if you are using more than 2 at
 a time then consider a dedicated battery pack.
 
 The code is available at [examples/servo.js](examples/servo.js)
@@ -178,7 +179,7 @@ kit you have 8 so you can set each one to be a separate colour.
 
 A simple wiring guide is below:
 
-![](https://raw.github.com/ajfisher/node-pixel/master/docs/custom_firmata_bb.png)
+![](https://raw.githubusercontent.com/ajfisher/node-pixel/master/docs/breadboard/custom_firmata_bb.png)
 
 Things to note:
 
@@ -205,7 +206,7 @@ Going further:
 ### Make some noise
 
 The sound sensor is a very simple microphone that outputs an analog signal. In
-Johnny Five this can be represented very simply as a `Sensor` object. 
+Johnny Five this can be represented very simply as a `Sensor` object.
 
 [Wiring instructions can be found in the Johnny Five docs](http://johnny-five.io/examples/microphone/)
 
@@ -280,7 +281,7 @@ ie the bit with the writing on it and they go from left to right.
 * The sensor requires a 2KΩ but you can use 2x1KΩ resistors in series as they
 "add up" to 2KΩ when used together like this.
 * The code we have here uses a custom controller. In Johnny-Five all components
-use controllers so we have generalised classes such as `Temperature Sensor` and 
+use controllers so we have generalised classes such as `Temperature Sensor` and
 we can then implement the details and drivers of these for each chip or different
 sensor. The LM335 we are using measures directly in °K so needs the `toCelsius`
 method provided to do that conversion.
@@ -299,14 +300,14 @@ When the code runs you should see the temperature print out in °C, °F & °K.
 
 Going further:
 
-* Visualise temperature data by writing to a web app. 
+* Visualise temperature data by writing to a web app.
 * Hook up an RGB LED or NeoPixel strip and visualise the temperature with colour
 
 ### Other components and what they do
 
 The other components don't have specific examples but here are some notes around them:
 
-* An RGB LED is simply a red, green and blue LED in one package. Wire it up to 
+* An RGB LED is simply a red, green and blue LED in one package. Wire it up to
 three digital pins and change the colour. The one in your kit is a `Common Cathode`
 RGB LED. [There's a code and wiring example here](http://johnny-five.io/examples/led-rgb/)
 * A potentiometer is a variable resistor. In your kit there are two and they

@@ -29,7 +29,7 @@ five.Board().on("ready", function() {
     freq: 1000,
   });
 
-  temperature.on("data", function(err, data) {
+  temperature.on("data", function(data) {
     console.log(data.celsius + "°C " + data.fahrenheit + "°F " + data.kelvin + "°K");
   });
 });
