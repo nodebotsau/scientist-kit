@@ -1,6 +1,6 @@
-# NodeBots Day 2015 Scientist Kit
+# NodeBots Day 2016 Scientist Kit
 
-You have a special nodebots kit which has been custom dessigned specifically
+You have a special nodebots kit which has been custom designed specifically
 for NodeBots day in order for you to get the most out of the day and build
 interesting things.
 
@@ -41,6 +41,11 @@ If you're on Windows or Mac, you'll need the CH340 drivers to talk to your
 arduino. In the `drivers/` folder you can find one for OSX and one for Windows.
 Just install the relevant one and you may need to restart your machine. Once done
 plug in your arduino and it should be fine (you'll get an error message if not).
+
+Note that on Mac you may get a prompt about opening the CodeBender site. You can
+skip past this at this point but if you want to program and manage embedded
+devices from the browser, the [CodeBender](http://codebender.cc) project is
+really interesting.
 
 ### Install node dependencies.
 
