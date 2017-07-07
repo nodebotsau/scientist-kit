@@ -1,7 +1,7 @@
-# NodeBots Day 2016 Scientist Kit
+# NodeBots Day Scientist Kit
 
-You have a special nodebots kit which has been custom designed specifically
-for NodeBots day in order for you to get the most out of the day and build
+You have a nodebots kit which has been custom designed specifically
+for NodeBots Day in order for you to get the most out of the day and build
 interesting things.
 
 Your kit should contain the following:
@@ -27,29 +27,19 @@ As you can see - lots of things to play with, learn about and take further.
 
 ## Installation and setup
 
-To get installed it's assumed you have [NodeJS](http://nodejs.org) installed.
+Start with the [installation process outlined here](https://github.com/nodebotsau/nbdau/blob/master/setup.md)
+if you haven't already done so.
 
-Clone this repository as:
+Clone this repository into a folder using:
 
 ```
 git clone https://github.com/nodebotsau/scientist-kit.git
+cd scientist-kit
 ```
-
-### Install arduino drivers
-
-If you're on Windows or Mac, you'll need the CH340 drivers to talk to your
-arduino. In the `drivers/` folder you can find one for OSX and one for Windows.
-Just install the relevant one and you may need to restart your machine. Once done
-plug in your arduino and it should be fine (you'll get an error message if not).
-
-Note that on Mac you may get a prompt about opening the CodeBender site. You can
-skip past this at this point but if you want to program and manage embedded
-devices from the browser, the [CodeBender](http://codebender.cc) project is
-really interesting.
 
 ### Install node dependencies.
 
-From the repo folder simply:
+From the repo folder then install the project files:
 
 ```
 npm install
@@ -63,10 +53,8 @@ Assuming you've had no issues, move onto the examples.
 
 To install the firmata firmware you'll need to talk to the arduino, you can
 install it using [interchange](https://www.npmjs.com/package/nodebots-interchange).
-Interchange is like a package manager or firmware written in JS.
-
-To use `interchange` make sure `./node_modules/.bin/` is on your `PATH` and then
-from the repo folder just run:
+Interchange is like a package manager or firmware written in JS and will have
+been installed as part of your initial set up.
 
 ```
 interchange install StandardFirmata -a uno
@@ -314,9 +302,9 @@ The other components don't have specific examples but here are some notes around
 
 * An RGB LED is simply a red, green and blue LED in one package. Wire it up to
 three digital pins and change the colour. The one in your kit is a `Common Cathode`
-RGB LED. [There's a code and wiring example here](http://johnny-five.io/examples/led-rgb/)
+RGB LED. [There's code and a wiring example here](http://johnny-five.io/examples/led-rgb/)
 * A potentiometer is a variable resistor. In your kit there are two and they
-look like dials you can turn. The two outer pins connect to 5V and GND (doesn't
+look like knobs you can turn. The two outer pins connect to 5V and GND (doesn't
 matter which way) and the centre pin connects to an analog pin on the arduino
 which you can then read with the [Sensor class](http://johnny-five.io/examples/potentiometer/)
 * Push buttons are what you'd expect - buttons you can push and then detect
