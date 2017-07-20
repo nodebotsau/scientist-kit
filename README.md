@@ -105,11 +105,9 @@ contents of a tweet, or how much you love NodeBots Day.
 
 [The wiring instructions are here in the Johnny Five docs](http://johnny-five.io/examples/lcd/)
 
-Note:
+Use the instructions for the [I2C, PCF8574 (Generic)](http://johnny-five.io/api/lcd/#i2c-pcf8574-generic)
 
-* Your potentiometer is bigger than the one in the diagram so leave a bit more
-space for it.
-* Pay attention to what is power and ground on the diagram versus how you wire it up
+Note:
 
 The code is available at [examples/lcd.js](examples/lcd.js)
 
@@ -123,7 +121,7 @@ You should see some messages appear on the screen.
 
 Going further:
 
-* Update the screen periodically with a counter - maybe a countdown clock
+* Update the screen periodically with a counter - maybe a countdown clock or an actual clock
 * Make a "scrolling game" or just make your text scroll across the screen.
 * Use the display to ask for input which you can then use buttons or potentiometers
 to provide the details back.
