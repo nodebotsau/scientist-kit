@@ -1,5 +1,7 @@
 # NodeBots Day Scientist Kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nodebotsau/scientist-kit.svg)](https://greenkeeper.io/)
+
 You have a nodebots kit which has been custom designed specifically
 for NodeBots Day in order for you to get the most out of the day and build
 interesting things.
