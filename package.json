@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/nodebotsau/scientist-kit#readme",
   "dependencies": {
-    "johnny-five": "^0.15.0",
+    "johnny-five": "^1.0.0",
     "node-pixel": "^0.10.0",
     "nodebots-interchange": "^1.2.0"
   }
