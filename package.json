@@ -28,6 +28,6 @@
   "dependencies": {
     "johnny-five": "^1.0.0",
     "node-pixel": "^0.10.0",
-    "nodebots-interchange": "^1.2.0"
+    "nodebots-interchange": "^2.0.0"
   }
 }
